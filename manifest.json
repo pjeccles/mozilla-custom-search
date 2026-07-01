@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "MS Quick Search",
+  "version": "1.0.0",
+  "description": "Type 'ms <keyword> <search text>' in the address bar to jump straight to a custom search engine.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ms-quick-search@local.extension",
+      "strict_min_version": "109.0"
+    }
+  },
+  "permissions": ["storage", "tabs"],
+  "omnibox": {
+    "keyword": "ms"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

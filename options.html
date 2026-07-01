@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>MS Quick Search — Settings</title>
+<link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <h1>MS Quick Search</h1>
+  <p class="intro">
+    Type <code>ms &lt;keyword&gt; &lt;search text&gt;</code> in the address bar.
+    Use <code>{searchTerms}</code> in a URL to mark where the search text should be inserted.
+  </p>
+
+  <p class="sync-info">
+    Settings are stored with <code>browser.storage.sync</code>, so they sync
+    automatically to any device signed in to the same Firefox Account with
+    Sync enabled for Add-ons.
+    <button id="open-sync-settings" type="button" class="link-button">
+      Open Firefox Sync settings
+    </button>
+  </p>
+
+  <div id="sync-banner" class="sync-banner" hidden>
+    Settings changed on another synced device.
+    <button id="reload-remote" type="button">Reload</button>
+  </div>
+
+  <table id="engines-table">
+    <thead>
+      <tr>
+        <th>Keyword</th>
+        <th>Name</th>
+        <th>URL template</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="engines-body"></tbody>
+  </table>
+
+  <div class="actions">
+    <button id="add-row" type="button">Add keyword</button>
+    <button id="save" type="button" class="primary">Save</button>
+    <button id="reset" type="button" class="danger">Reset to defaults</button>
+  </div>
+
+  <p id="status" role="status"></p>
+
+  <script src="options.js"></script>
+</body>
+</html>
