@@ -5,7 +5,7 @@ const DEFAULT_ENGINES = {
   },
   c: {
     name: "Confluence",
-    url: "https://confluence.netcommwireless.com/dosearchsite.action?cql=siteSearch+~+%22{searchTerms}%22&queryString={searchTerms}"
+    url: "https://confluence.mycompany.com/dosearchsite.action?cql=siteSearch+~+%22{searchTerms}%22&queryString={searchTerms}"
   },
   yt: {
     name: "YouTube",
